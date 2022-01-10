@@ -4,13 +4,13 @@ export class myDirective {
   * Creates an instance.
   */
     constructor(private viewContainerRef: 
-						ViewContainerRef,
+			ViewContainerRef,
                 private componentFactoryResolver: 
-                        ComponentFactoryResolver) {}
-    createMyComponent() {   
+                        ComponentFactoryResolver) { }
+    createMyComponent() {
         const componentFactory = this.componentFactoryResolver.
                              resolveComponentFactory(myComponent);
-    
+	    
         this.viewContainerRef.createComponent(componentFactory);
     }
 }
